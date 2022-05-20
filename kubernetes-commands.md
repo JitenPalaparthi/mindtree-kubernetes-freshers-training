@@ -40,7 +40,7 @@
       - Create a pod called nginx , port 80 in dev namespace 
       - ```kubectl run nginx --image=nginx --port=80 -n dev```
     - 2- Through manifest file
-      - Here is the manifest file of [nginx pod] (workloads/create-nginx-pod.yaml)
+      - Here is the manifest file of [nginx pod](workloads/create-nginx-pod.yaml)
       - To create pod from the manifest file use the below command
       - ```kubectl create -f workloads/create-nginx-pod.yaml -n dev```
   - To know more information about pod
