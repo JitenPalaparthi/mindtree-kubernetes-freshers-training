@@ -16,8 +16,8 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx
+      - name: nginx # name of your java application
+        image: nginx # image of your java application
         ports:
-        - containerPort: 80
+        - containerPort: 80 #port of your java application
 

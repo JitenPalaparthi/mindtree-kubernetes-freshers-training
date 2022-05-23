@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleapp
+  namespace: dev
+  labels:
+    app: sampleapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sampleapp
+  template:
+    metadata:
+      labels:
+        app: sampleapp
+    spec:
+      containers:
+      - name: sampleapp # name of your java application
+        image: jpalaparthi/samplejavaapp # image of your java application
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080 #port of your java application
+

@@ -73,3 +73,20 @@
     - Scale up/down can also be done through the deployment file, change replicas: property value
     - ```kubectl edit deployment nginx -n dev```
 
+ ### Building image for spring boot application
+
+ - Go to the root of application directory
+  
+ - give your dockergub id and imagename
+   
+ ```./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=jpalaparthi/samplejavaapp```
+
+- instead of jpalaparthi give your dockerhub or azure id
+
+ ```docker push jpalaparthi/samplejavaapp```
+
+ ```kubectl create -f workloads/create-sampleapp-deployment.yaml -n dev```
+
+- The app is running on 8080 port inside your container and same port can be used for service and pod as well
+
+ ```kubectl create -f workloads/create-sampleapp-service.yaml -n dev```
