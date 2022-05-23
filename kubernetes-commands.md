@@ -55,3 +55,12 @@
   - ```kubectl logs --tail=5 nginx -n dev```
   - To delete a pod
   - ```kubectl delete pod nginx -n dev```
+  - Service
+    - ```kubectl create -f workloads/create-nginx-service.yaml -n dev```
+    - There are three types to access the servce
+    - type: ClusterIP
+      - ClusterIP type is used to access only inside the cluster
+    - type: NodePort
+      - NodePort type is used to access only through node ip address
+    - type: LoadBalancer
+      - LoadBalancer type is used to access through the cloud provider load balancer ip/url
