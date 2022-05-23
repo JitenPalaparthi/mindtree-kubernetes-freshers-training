@@ -37,7 +37,7 @@
   - Create a pod
     - There are two ways to create a pod
     - 1- Through command line.
-      - Create a pod called nginx , port 80 in dev namespace 
+      - Create a pod called nginx , port 80 in dev namespace
       - ```kubectl run nginx --image=nginx --port=80 -n dev```
     - 2- Through manifest file
       - Here is the manifest file of [nginx pod](workloads/create-nginx-pod.yaml)
@@ -55,4 +55,3 @@
   - ```kubectl logs --tail=5 nginx -n dev```
   - To delete a pod
   - ```kubectl delete pod nginx -n dev```
-
