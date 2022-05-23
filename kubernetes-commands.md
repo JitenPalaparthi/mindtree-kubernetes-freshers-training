@@ -63,4 +63,13 @@
     - type: NodePort
       - NodePort type is used to access only through node ip address
     - type: LoadBalancer
-      - LoadBalancer type is used to access through the cloud provider load balancer ip/url
+      - LoadBalancer type is used to access through the cloud provider load balancer ip
+  - Deployment
+    - Deployments are used to run more replicas. They can scale up or down based on the load
+    - Delete the nginx pod before running the deployment. If service is already runnign no need to resum the service.
+    - ```kubectl create -f workloads/create-nginx-deployment.yaml -n dev```
+    - Scale the deployment up/down. Up is giving more numbers and down is giving less number
+    - ```kubectl scale --replicas=10 deployment nginx -n dev```
+    - Scale up/down can also be done through the deployment file, change replicas: property value
+    - ```kubectl edit deployment nginx -n dev```
+

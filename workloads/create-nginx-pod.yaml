@@ -11,4 +11,4 @@ spec:
       image: nginx
       imagePullPolicy: IfNotPresent
       ports:
-        - containerPort: 80
+        - containerPort: 80 # Give port of your java application
